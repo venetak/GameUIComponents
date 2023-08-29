@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.20.0]
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
      - uses: actions/checkout@v2
        with:
@@ -22,6 +23,7 @@ jobs:
        with:
         node-version: ${{ matrix.node-version }}
      - name: Approve a PR
+       if: steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
        run: gh pr review --approve "$PR_URL"
        env:
          PR_URL: ${{github.event.pull_request.html_url}}
