@@ -71,7 +71,7 @@
     "karma-spec-reporter": "0.0.36",
     "karma-webpack": "^5.0.0",
     "lint-staged": "^13.2.3",
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "style-loader": "^3.3.2",
     "uglifycss": "0.0.29",
     "webpack": "^5.82.0",
